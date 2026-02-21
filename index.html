@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="title">
+    <h1>ROCK</h1>
+    <h1>PAPER</h1>
+    <h1>SCISSORS</h1>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-box">
+      <p class="score-label">COMPUTER<br> SCORE</p>
+      <h2 id="computerScore">0</h2>
+    </div>
+    <div class="score-box">
+      <p class="score-label">YOUR<br> SCORE</p>
+      <h2 id="userScore">0</h2>
+    </div>
+  </div>
+</div>
+
+<div class="game-area" id="gameArea">
+  <div class="line line-1"></div>
+  <div class="line line-2"></div>
+  <div class="line line-3"></div>
+
+  <div class="circle rock" onclick="playGame('rock')">
+    <img src="assets/rock.png" alt="Rock" class="icon">
+  </div>
+  <div class="circle paper" onclick="playGame('paper')">
+    <img src="assets/paper.png" alt="Paper" class="icon">
+  </div>
+  <div class="circle scissors" onclick="playGame('scissors')">
+    <img src="assets/scissors.png" alt="Scissors" class="icon">
+  </div>
+</div>
+
+<div class="result-area hidden" id="resultArea">
+  <div class="pick-box">
+    <p>YOU PICKED</p>
+    <div id="userPick" class="circle"></div>
+  </div>
+
+  <div class="result-text">
+    <h1 id="resultMessage"></h1>
+    <p id="resultSubtext" class="result-subtext"></p>
+    <button id="playAgainBtn" class="primary-btn" onclick="playAgain()">PLAY AGAIN</button>
+  </div>
+
+  <div class="pick-box">
+    <p>PC PICKED</p>
+    <div id="pcPick" class="circle"></div>
+  </div>
+</div>
+
+<div class="hurray hidden" id="hurrayPage">
+  <div class="hurray-content">
+    <div class="trophy-graphic">
+      <span class="star star-1">★</span>
+      <span class="star star-2">★</span>
+      <span class="star star-3">★</span>
+      <div class="trophy">🏆</div>
+    </div>
+    <h1>HURRAY!!</h1>
+    <h2>YOU WON THE GAME</h2>
+    <button class="primary-btn" onclick="playAgain()">PLAY AGAIN</button>
+  </div>
+</div>
+
+<div class="bottom-buttons">
+  <button class="rules-btn" onclick="openRules()">RULES</button>
+  <button id="nextBtn" class="next-btn hidden" onclick="goToHurray()">NEXT</button>
+</div>
+
+<div class="rules-popup hidden" id="rulesPopup">
+  <div class="rules-header">
+    <h2>Game Rules</h2>
+    <button class="rules-close" onclick="closeRules()">✕</button>
+  </div>
+  <ul class="rules-list">
+    <li>Rock smashes scissors, scissors cut paper, paper wraps rock.</li>
+    <li>Pick your count - "rock paper scissors shoot" or just "rock paper scissors" - whatever you both use.</li>
+    <li>Great for quick tie-breakers, picking who goes first, or just killing time.</li>
+    <li>Same pick = go again until someone wins.</li>
+  </ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
