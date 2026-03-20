@@ -198,8 +198,9 @@ body {
 }
 
 .hurray {
-  margin-top: 80px;
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -211,37 +212,73 @@ body {
   position: relative;
   width: 260px;
   height: 220px;
-  margin: 0 auto 20px;
+  margin: 0 auto 40px;
 }
 
-.trophy {
+.trophy-img {
+  width: 220px;
+  height: auto;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 120px;
 }
 
 .star {
   position: absolute;
-  color: #ffd700;
-  font-size: 36px;
+  color: #d3e7ba;
+}
+
+.star-large {
+  font-size: 140px;
+}
+
+.star-medium {
+  font-size: 100px;
+}
+
+.star-small {
+  font-size: 40px;
 }
 
 .star-1 {
-  top: 10%;
-  left: 10%;
+  top: -80%;
+  left: 80%;
 }
 
 .star-2 {
-  top: 0;
-  right: 12%;
+  top: 10%;
+  right: -40%;
 }
 
-
 .star-3 {
-  bottom: 8%;
-  right: 25%;
+  bottom: 20%;
+  left:-50%;
+}
+
+.star-4 {
+  top: -35%;
+  left: -20%;
+}
+
+.star-5 {
+  top: -50%;
+  left: 15%;
+}
+
+.star-6 {
+  top: -40%;
+  right: 45%;
+}
+
+.star-7 {
+  bottom: -5%;
+  left: 5%;
+}
+
+.star-8 {
+  top: -10%;
+  right: -45%;
 }
 
 .hurray-content h1 {

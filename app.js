@@ -66,19 +66,20 @@ function showResult(user, pc) {
     computerScore++;
     computerScoreEl.innerText = computerScore;
   }
-  }
+}
 
 function playAgain() {
   document.getElementById("hurrayPage").classList.add("hidden");
   document.getElementById("resultArea").classList.add("hidden");
-  document.getElementById("gameArea").classList.remove("hidden"); 
+  document.getElementById("gameArea").classList.remove("hidden");
 }
-
 
 function goToHurray() {
   document.getElementById("resultArea").classList.add("hidden");
   document.getElementById("hurrayPage").classList.remove("hidden");
-  nextBtn.classList.add("hidden"); 
+  const header = document.querySelector(".header");
+  if (header) header.classList.add("hidden");
+  nextBtn.classList.add("hidden");
 }
 
 function getIconImg(choice) {
