@@ -83,7 +83,7 @@ function goToHurray() {
 }
 
 function getIconImg(choice) {
-  const src = choice === "rock" ? "assets/rock.png" : choice === "paper" ? "assets/paper.png" : "assets/scissors.png";
+  const src = choice === "rock" ? "assets/rock.jpg" : choice === "paper" ? "assets/paper.jpg" : "assets/scissors.jpg";
   const alt = choice.charAt(0).toUpperCase() + choice.slice(1);
   return `<img src="${src}" alt="${alt}" class="icon">`;
 }
